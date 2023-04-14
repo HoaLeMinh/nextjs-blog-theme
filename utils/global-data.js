@@ -22,6 +22,7 @@ export const getGlobalData = () => {
     name: 'OMG Talent Group',
     blogTitle: 'OMG Talent Group',
     footerText: 'All rights reserved.',
+    siteLogo: 'https://static.wixstatic.com/media/f73c4f_6c4cb8e76ca14c91b5bbde588b85f398~mv2.jpg',
   };
 
   return {
