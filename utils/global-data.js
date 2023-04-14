@@ -1,4 +1,4 @@
-export const getGlobalData = () => {
+/* export const getGlobalData = () => {
   const name = process.env.BLOG_NAME
     ? decodeURI(process.env.BLOG_NAME)
     : 'Jay Doe';
@@ -13,5 +13,18 @@ export const getGlobalData = () => {
     name,
     blogTitle,
     footerText,
+  };
+};
+ */
+
+export const getGlobalData = () => {
+  const data = {
+    name: 'OMG Talent Group',
+    blogTitle: 'OMG Talent Group',
+    footerText: 'All rights reserved.',
+  };
+
+  return {
+    data
   };
 };

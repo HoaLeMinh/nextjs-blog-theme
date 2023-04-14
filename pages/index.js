@@ -61,7 +61,7 @@ export default function Index({ posts, globalData }) {
 
 export function getStaticProps() {
   const posts = getPosts();
-  const globalData = getGlobalData();
+  const globalData = getGlobalData().data;
 
   return { props: { posts, globalData } };
 }
