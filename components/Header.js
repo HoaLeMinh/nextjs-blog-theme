@@ -14,36 +14,35 @@ export default function Header({ name, siteLogo }) {
   ); */
 
   return (
-    <header className="flex w-full items-center justify-between py-10">
-      <div>
+    <header className={"w-full"}>
+      <div className='flex p-4 justify-between items-center'>
         <Link href="/" aria-label={name}>
             <div className="mr-3">
               {/* <Logo /> */}
-              <Image
-                src={siteLogo}
-                alt="Logo"
-                width={113}
-                height={55}
-              />
+                <Image
+                  src={siteLogo}
+                  alt="Logo"
+                  width={113}
+                  height={55}
+                  objectFit='contain'
+                />
             </div>
         </Link>
-      </div>
-      <div className="relative hidden lg:flex items-center ml-auto">
-        <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
-          {headerNavLinks.map((link, index) => (
-            <ul key={index} className='flex space-x-8'>
-              <li>
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="pt-1 pb-1 pl-4 pr-4 font-medium text-gray-900 dark:text-gray-100 sm:p-4 no-underline"
-                >
-                  {link.title}
-                </Link>
-              </li>
-            </ul>
-          ))}
-        </nav>
+          <nav className="flex flex-row gap-4 text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
+            {headerNavLinks.map((link, index) => (
+              <ul key={index} className='flex space-x-8'>
+                <li>
+                  <Link
+                    key={link.title}
+                    href={link.href}
+                    className="pt-1 pb-1 pl-4 pr-4 font-medium text-gray-900 dark:text-gray-100 sm:p-4 no-underline"
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              </ul>
+            ))}
+          </nav>
       </div>
     </header>
   );
