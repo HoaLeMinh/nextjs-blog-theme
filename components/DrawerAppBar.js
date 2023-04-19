@@ -14,6 +14,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Slide from '@mui/material/Slide';
 // import Link from '@mui/material/Link';
 import Link from 'next/link'
 import Image from 'next/image';
@@ -30,7 +32,6 @@ function DrawerAppBar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
-    console.log('call handleDrawerToggle...');
     setMobileOpen((prevState) => !prevState);
   };
 
@@ -67,49 +68,51 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex', maxWidth: 'xl'}}>
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: {sm: 'block' }, pt: 1}}
-          >
-            <Link href='/'>    
-                <Image
-                    src={siteLogo}
-                    alt={siteName}
-                    width={113}
-                    height={55}
-                    objectFit='contain'
-                />
-            </Link>
-          </Typography>
-          <div className='md:pe-8'>
-            <LanguageSwitch />
-          </div>
-          <div className='md:pe-8'>
-            <ThemeSwitch  />
-          </div>
-          <Box sx={{ display: { xs: 'none', sm: 'none', md:'block' } }}>
-            {headerNavLinks.map((item, index) => (
-              <Link key={index} href={item.href}>   
-                <Button sx={{ color: '#fff' }}>
-                    {item.title}
-                </Button>
+      <HideOnScroll {...props}>
+        <AppBar component="nav" enableColorOnDark>  
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { md: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, display: {sm: 'block' }, pt: 1}}
+            >
+              <Link href='/'>    
+                  <Image
+                      src={siteLogo}
+                      alt={siteName}
+                      width={113}
+                      height={55}
+                      objectFit='contain'
+                  />
               </Link>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
+            </Typography>
+            <div className='md:pe-8'>
+              <LanguageSwitch />
+            </div>
+            <div className='md:pe-8'>
+              <ThemeSwitch  />
+            </div>
+            <Box sx={{ display: { xs: 'none', sm: 'none', md:'block' } }}>
+              {headerNavLinks.map((item, index) => (
+                <Link key={index} href={item.href}>   
+                  <Button sx={{ color: '#fff' }}>
+                      {item.title}
+                  </Button>
+                </Link>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
       <Box component="nav">
         <Drawer
           container={container}
@@ -132,6 +135,31 @@ function DrawerAppBar(props) {
 }
 
 DrawerAppBar.propTypes = {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
+
+function HideOnScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+HideOnScroll.propTypes = {
+  children: PropTypes.element.isRequired,
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
