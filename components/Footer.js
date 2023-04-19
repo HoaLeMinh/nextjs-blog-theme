@@ -1,4 +1,77 @@
-const sunIcon = (
+import Link from 'next/link';
+import Image from 'next/image';
+import siteMetadata from '../data/siteMetadata';
+import Mail from '../data/mail.svg'
+import Facebook from '../data/facebook.svg'
+import Linkedin from '../data/linkedin.svg'
+import Instagram from '../data/instagram.svg'
+
+function Footer() {
+  return (
+    <footer>
+      <hr className="mt-8 divide-y divide-gray-200 dark:divide-gray-700"></hr>
+      <div className="mt-4 flex flex-col items-center">
+        <div className="mb-3 flex space-x-4">
+{/*           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
+          <SocialIcon kind="facebook" href={siteMetadata.facebook} size="6" />
+          <SocialIcon kind="instagram" href={siteMetadata.instagram} size="6" />
+          <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" /> */}
+          <Link href={`mailto:${siteMetadata.email}`} className="text-sm text-gray-500 transition hover:text-gray-600">
+            <a>
+              <Image
+                src={Mail}
+                alt="mail"
+                width={20}
+                height={20}
+              />
+              </a>
+          </Link>
+          <Link href={siteMetadata.facebook} >
+            <a target="_blank" rel="noopener noreferrer" >
+              <Image
+                src={Facebook}
+                alt="Facebook"
+                width={20}
+                height={20}
+              />
+              </a>
+          </Link>
+          <Link href={siteMetadata.instagram} 
+           className="text-sm text-gray-500 transition hover:text-gray-600">
+            <a target="_blank" rel="noopener noreferrer" >
+              <Image
+                src={Linkedin}
+                alt="Linkedin"
+                width={20}
+                height={20}
+              />
+              </a>
+          </Link>
+          <Link href={siteMetadata.linkedin} 
+            className="text-sm text-gray-500 transition hover:text-gray-600">
+            <a target="_blank" rel="noopener noreferrer" >
+              <Image
+                src={Instagram}
+                alt="Instagram"
+                width={20}
+                height={20}
+              />
+              </a>
+          </Link>
+        </div>
+        <div className="mb-8 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <div>{`© ${new Date().getFullYear()}`}</div>
+          <div>{` • `}</div>
+          <Link href="/">{siteMetadata.title}</Link>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer;
+
+/* const sunIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="25"
@@ -86,4 +159,4 @@ export default function Footer({ copyrightText }) {
       <ThemeSwitcher />
     </footer>
   );
-}
+} */

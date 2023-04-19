@@ -5,14 +5,14 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
-export default function Projects({ globalData }) {
+export default function HallOfFame({ globalData }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} siteLogo={globalData.siteLogo} />
       <main className="w-full">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {"Projects"}
+          {"Hall OfF Fame"}
         </h1>
       </main>
       <Footer copyrightText={globalData.footerText} />

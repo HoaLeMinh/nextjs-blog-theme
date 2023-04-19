@@ -15,7 +15,7 @@ export default function Header({ siteName, siteLogo }) {
   ); */
 
   return (
-    <header className={"w-full"}>
+    <header className={"max-w-screen-desktop"}>
       <DrawerAppBar siteName={siteName} siteLogo={siteLogo}/>
 {/*       <div className='flex p-4 justify-between items-center'>
         <Link href="/" aria-label={name}>

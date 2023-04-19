@@ -17,16 +17,20 @@ import Button from '@mui/material/Button';
 // import Link from '@mui/material/Link';
 import Link from 'next/link'
 import Image from 'next/image';
-import ThemeSwitch from './ThemeSwitch'
+import ThemeSwitch from './ThemeSwitch';
+import LanguageSwitch from './LanguageSwitch';
 
-const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+import headerNavLinks from '../data/headerNavLinks'
+
+const drawerWidth = 200;
+// const navItems = ['Home', 'About', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window, siteName, siteLogo } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
+    console.log('call handleDrawerToggle...');
     setMobileOpen((prevState) => !prevState);
   };
 
@@ -45,11 +49,11 @@ function DrawerAppBar(props) {
         </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {headerNavLinks.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <Link href='/'>
-                <ListItemText primary={item} />
+              <Link href={item.href}>
+                <ListItemText primary={item.title} />
               </Link>
             </ListItemButton>
           </ListItem>
@@ -61,7 +65,7 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', maxWidth: 'xl'}}>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
@@ -70,7 +74,7 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { md: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -90,13 +94,16 @@ function DrawerAppBar(props) {
             </Link>
           </Typography>
           <div className='md:pe-8'>
+            <LanguageSwitch />
+          </div>
+          <div className='md:pe-8'>
             <ThemeSwitch  />
           </div>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item, index) => (
-              <Link key={index} href='/'>   
-                <Button key={item} sx={{ color: '#fff' }}>
-                    {item}
+          <Box sx={{ display: { xs: 'none', sm: 'none', md:'block' } }}>
+            {headerNavLinks.map((item, index) => (
+              <Link key={index} href={item.href}>   
+                <Button sx={{ color: '#fff' }}>
+                    {item.title}
                 </Button>
               </Link>
             ))}
@@ -113,7 +120,7 @@ function DrawerAppBar(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', md: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >
