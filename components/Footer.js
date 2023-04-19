@@ -93,8 +93,8 @@ function Footer(props) {
            className="text-sm text-gray-500 transition hover:text-gray-600">
             <a target="_blank" rel="noopener noreferrer" >
               <Image
-                src={Linkedin}
-                alt="Linkedin"
+                src={Instagram}
+                alt="Instagram"
                 width={20}
                 height={20}
               />
@@ -104,8 +104,8 @@ function Footer(props) {
             className="text-sm text-gray-500 transition hover:text-gray-600">
             <a target="_blank" rel="noopener noreferrer" >
               <Image
-                src={Instagram}
-                alt="Instagram"
+                src={Linkedin}
+                alt="Linkedin"
                 width={20}
                 height={20}
               />
