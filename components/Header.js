@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import headerNavLinks from '../data/headerNavLinks'
+import DrawerAppBar from './DrawerAppBar'
 
-export default function Header({ name, siteLogo }) {
+export default function Header({ siteName, siteLogo }) {
 /*   return (
     <header className="pt-20 pb-12">
       <p className="text-2xl dark:text-white text-center">
@@ -15,10 +16,10 @@ export default function Header({ name, siteLogo }) {
 
   return (
     <header className={"w-full"}>
-      <div className='flex p-4 justify-between items-center'>
+      <DrawerAppBar siteName={siteName} siteLogo={siteLogo}/>
+{/*       <div className='flex p-4 justify-between items-center'>
         <Link href="/" aria-label={name}>
             <div className="mr-3">
-              {/* <Logo /> */}
                 <Image
                   src={siteLogo}
                   alt="Logo"
@@ -43,7 +44,7 @@ export default function Header({ name, siteLogo }) {
               </ul>
             ))}
           </nav>
-      </div>
+      </div> */}
     </header>
   );
 }
