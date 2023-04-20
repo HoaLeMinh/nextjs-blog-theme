@@ -76,8 +76,8 @@ function Footer(props) {
               <Image
                 src={Mail}
                 alt="mail"
-                width={32}
-                height={32}
+                width={24}
+                height={24}
               />
               </a>
           </Link>
@@ -89,7 +89,7 @@ function Footer(props) {
                 width={20}
                 height={20}
               /> */}
-              <FacebookIcon width={32} height={32} className="color-white"/>
+              <FacebookIcon width={24} height={24} className="color-white"/>
               </a>
           </Link>
           <Link href={siteMetadata.instagram} 
@@ -98,8 +98,8 @@ function Footer(props) {
               <Image
                 src={Instagram}
                 alt="Instagram"
-                width={32}
-                height={32}
+                width={24}
+                height={24}
               />
               </a>
           </Link>
@@ -109,8 +109,8 @@ function Footer(props) {
               <Image
                 src={Linkedin}
                 alt="Linkedin"
-                width={32}
-                height={32}
+                width={24}
+                height={24}
               />
               </a>
           </Link>
