@@ -1,10 +1,10 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 
 export default function MediaCard({imageSrc, title, description, podcastSrc }) {
   return (
     <>
-    <div class="w-full border-1 border-solid border-slate-200 dark:border-slate-700 rounded-lg">
-        <div class="w-full aspect-square">
+    <div className="w-full border-1 border-solid border-slate-200 dark:border-slate-700 rounded-lg">
+        {/* <div className="w-full aspect-square"> */}
 {/*           <Image
             src={imageSrc}
             alt={title}
@@ -17,13 +17,13 @@ export default function MediaCard({imageSrc, title, description, podcastSrc }) {
             class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
           /> */}
         <img src={imageSrc} alt={title} className="w-full aspect-square object-cover" />
-        </div>
-        <div class="mt-4 text-center">
-          <h2 class="font-bold">
+        {/* </div> */}
+        <div className="mt-4 text-center">
+          <h2 className="text-xl font-bold p-4">
             {title}
           </h2>
-          <p class="text-left p-4">{description}</p>
-          <center><iframe class="w-full overflow-hidden" scrolling="no" src={podcastSrc} title={title} height={170} ></iframe></center>
+          <p className="text-md text-left p-4 ">{description}</p>
+          <center className={'aspect-video'}><iframe loading="lazy" className="w-full h-full overflow-hidden" scrolling="no" allow="accelerometer; autoplay;" src={podcastSrc} title={title} height={170} ></iframe></center>
         </div>
       </div>
     </>

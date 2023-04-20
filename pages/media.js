@@ -14,7 +14,7 @@ export default function Media({globalData }) {
       <Header siteName={globalData.name} siteLogo={globalData.siteLogo} />
       <main className="w-full">
         <div className='pt-16 lg:pt-24'><br/></div>
-        <h1 id="back-to-top-anchor" className="text-3xl lg:text-5xl text-center mb-12">
+        <h1 id="back-to-top-anchor" className="text-3xl lg:text-5xl font-bold text-center mb-12">
           {"MEDIA"}
         </h1>
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-32 px-4 md:px-8 xl:px-64">

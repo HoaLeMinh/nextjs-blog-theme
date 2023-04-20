@@ -11,8 +11,9 @@ export default function About({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} siteLogo={globalData.siteLogo} />
       <main className="w-full">
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {"About"}
+        <div className='pt-16 lg:pt-24'><br/></div>
+        <h1 id="back-to-top-anchor" className="text-3xl lg:text-5xl font-bold text-center mb-12">
+          {"ABOUT US"}
         </h1>
       </main>
       <Footer copyrightText={globalData.footerText} />

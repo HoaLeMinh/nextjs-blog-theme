@@ -11,9 +11,11 @@ export default function HallOfFame({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} siteLogo={globalData.siteLogo} />
       <main className="w-full">
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {"Hall OfF Fame"}
+        <div className='pt-16 lg:pt-24'><br/></div>
+        <h1 id="back-to-top-anchor" className="text-3xl lg:text-5xl font-bold text-center mb-4">
+          {"HALL OF FAME"}
         </h1>
+        <p className="text-md lg:text-xl italic text-center p-4">{"Some of our favorite moments with talent, influencers, and collaborators."}</p>
       </main>
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
