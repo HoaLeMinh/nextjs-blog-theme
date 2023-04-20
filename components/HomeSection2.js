@@ -4,8 +4,8 @@ import Link from 'next/link'
 
 const HomeSection2 = ({ title, subtitle, buttonCaption, href }) => (
   <div className="w-full space-y-2 pt-6 pb-8 md:space-y-5">
-    <h1 className="font-bold text-center">{title}</h1>
-    <p className="text-md italic text-center p-4">{subtitle}</p>
+    <h1 className="text-3xl lg:text-5xl font-bold text-center">{title}</h1>
+    <p className="text-md lg:text-xl  italic text-center p-4">{subtitle}</p>
     <center>
       {/* <form>
         <button

@@ -4,7 +4,7 @@ const headerNavLinks = [
   { href: '/about', title: 'About Us' },
   { href: '/talents', title: 'Talent' },
   { href: '/team', title: 'The Team' },
-  { href: '/projects', title: 'Media' },
+  { href: '/media', title: 'Media' },
   { href: '/hall-of-fame', title: 'Hall of Fame' },
 ]
 

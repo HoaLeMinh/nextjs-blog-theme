@@ -39,6 +39,7 @@ function DrawerAppBar(props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
         <Typography variant="h6" sx={{ my: 2 }}>
             <Link href='/'>    
+              <a>
                 <Image
                     src={siteLogo}
                     alt={siteName}
@@ -46,6 +47,7 @@ function DrawerAppBar(props) {
                     height={55}
                     objectFit='contain'
                 />
+              </a>
             </Link>
         </Typography>
       <Divider />
@@ -85,7 +87,8 @@ function DrawerAppBar(props) {
               component="div"
               sx={{ flexGrow: 1, display: {sm: 'block' }, pt: 1}}
             >
-              <Link href='/'>    
+              <Link href='/'> 
+                <a>   
                   <Image
                       src={siteLogo}
                       alt={siteName}
@@ -93,6 +96,7 @@ function DrawerAppBar(props) {
                       height={55}
                       objectFit='contain'
                   />
+                </a>
               </Link>
             </Typography>
             <div className='md:pe-8'>

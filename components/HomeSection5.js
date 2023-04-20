@@ -7,8 +7,8 @@ import Image from 'next/image'
 
 const HomeSection5 = ({ title, imagesSrc }) => {
   return (
-    <div className="w-full space-y-2 pt-6 pb-4 md:space-y-5 bg-gray-100 dark:bg-gray-800 ">
-      <h1 className="font-bold text-center">{title}</h1>
+    <div className="w-full space-y-2 pt-6 pb-4 md:space-y-5 bg-neutral-200 dark:bg-neutral-500">
+      <h1 className="text-3xl lg:text-5xl font-bold text-center">{title}</h1>
       <div className={'p-8 md:space-y-8'}>
         <div className={''}>
           {/* <MasonryGrid

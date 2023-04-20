@@ -6,6 +6,8 @@ import Facebook from '../data/facebook.svg'
 import Linkedin from '../data/linkedin.svg'
 import Instagram from '../data/instagram.svg'
 
+import FacebookIcon from './FacebookIcon'
+
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -74,19 +76,20 @@ function Footer(props) {
               <Image
                 src={Mail}
                 alt="mail"
-                width={20}
-                height={20}
+                width={32}
+                height={32}
               />
               </a>
           </Link>
           <Link href={siteMetadata.facebook} >
             <a target="_blank" rel="noopener noreferrer" >
-              <Image
+{/*               <Image
                 src={Facebook}
                 alt="Facebook"
                 width={20}
                 height={20}
-              />
+              /> */}
+              <FacebookIcon width={32} height={32} className="color-white"/>
               </a>
           </Link>
           <Link href={siteMetadata.instagram} 
@@ -95,8 +98,8 @@ function Footer(props) {
               <Image
                 src={Instagram}
                 alt="Instagram"
-                width={20}
-                height={20}
+                width={32}
+                height={32}
               />
               </a>
           </Link>
@@ -106,13 +109,13 @@ function Footer(props) {
               <Image
                 src={Linkedin}
                 alt="Linkedin"
-                width={20}
-                height={20}
+                width={32}
+                height={32}
               />
               </a>
           </Link>
         </div>
-        <div className="mb-8 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-8 flex space-x-2 text-sm text-stale-500 dark:text-stale-400">
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
