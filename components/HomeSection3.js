@@ -2,7 +2,7 @@ import * as React from 'react';
 import Image from 'next/image'
 
 const HomeSection3 = ({ title, subtitle, imagesSrc, managementList }) => (
-  <div className="w-full space-y-2 pt-6 pb-8 md:space-y-5 bg-neutral-200 dark:bg-neutral-700 rounded-lg">
+  <div className="w-full space-y-2 pt-6 pb-8 md:space-y-5 bg-neutral-300/40 dark:bg-neutral-500/40 rounded-lg">
     <h1 className="text-3xl lg:text-5xl font-bold text-center">{title}</h1>
     <p className="text-md lg:text-xl  mt-2 italic text-center p-4">{subtitle}</p>
     {/** image list */}

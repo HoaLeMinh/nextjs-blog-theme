@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const HomeSection5 = ({ title, imagesSrc }) => {
   return (
-    <div className="w-full space-y-2 pt-6 pb-4 md:space-y-5 bg-neutral-200 dark:bg-neutral-500">
+    <div className="w-full space-y-2 pt-6 pb-4 md:space-y-5 bg-neutral-300/40 dark:bg-neutral-500/40">
       <h1 className="text-3xl lg:text-5xl font-bold text-center">{title}</h1>
       <div className={'p-8 md:space-y-8'}>
         <div className={''}>
