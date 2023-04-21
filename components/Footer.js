@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import siteMetadata from '../data/siteMetadata';
-import Mail from '../data/mail.svg'
-import Facebook from '../data/facebook.svg'
-import Linkedin from '../data/linkedin.svg'
-import Instagram from '../data/instagram.svg'
+/* import Mail from '../data/mail.svg'
+import Facebook from '../data/facebook.svg' */
+/* import Linkedin from '../data/linkedin.svg'
+import Instagram from '../data/instagram.svg' */
 
+import MailIcon from './MailIcon'
 import FacebookIcon from './FacebookIcon'
+import LinkedinIcon from './LinkedinIcon'
+import InstagramIcon from './InstagramIcon'
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
@@ -71,48 +74,25 @@ function Footer(props) {
           <SocialIcon kind="facebook" href={siteMetadata.facebook} size="6" />
           <SocialIcon kind="instagram" href={siteMetadata.instagram} size="6" />
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" /> */}
-          <Link href={`mailto:${siteMetadata.email}`} className="text-sm text-gray-500 transition hover:text-gray-600">
+          <Link href={`mailto:${siteMetadata.email}`}>
             <a>
-              <Image
-                src={Mail}
-                alt="mail"
-                width={24}
-                height={24}
-              />
-              </a>
+              <MailIcon width={24} height={24}/>
+            </a>
           </Link>
           <Link href={siteMetadata.facebook} >
             <a target="_blank" rel="noopener noreferrer" >
-{/*               <Image
-                src={Facebook}
-                alt="Facebook"
-                width={20}
-                height={20}
-              /> */}
-              <FacebookIcon width={24} height={24} className="color-white"/>
-              </a>
+              <FacebookIcon width={24} height={24} />
+            </a>
           </Link>
-          <Link href={siteMetadata.instagram} 
-           className="text-sm text-gray-500 transition hover:text-gray-600">
+          <Link href={siteMetadata.instagram}>
             <a target="_blank" rel="noopener noreferrer" >
-              <Image
-                src={Instagram}
-                alt="Instagram"
-                width={24}
-                height={24}
-              />
-              </a>
+              <InstagramIcon width={24} height={24} />
+            </a>
           </Link>
-          <Link href={siteMetadata.linkedin} 
-            className="text-sm text-gray-500 transition hover:text-gray-600">
+          <Link href={siteMetadata.linkedin}>
             <a target="_blank" rel="noopener noreferrer" >
-              <Image
-                src={Linkedin}
-                alt="Linkedin"
-                width={24}
-                height={24}
-              />
-              </a>
+              <LinkedinIcon width={24} height={24} />
+            </a>
           </Link>
         </div>
         <div className="mb-8 flex space-x-2 text-sm text-stale-500 dark:text-stale-400">

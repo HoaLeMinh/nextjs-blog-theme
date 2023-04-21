@@ -19,8 +19,7 @@ export default function Index({globalData}) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header siteName={globalData.name} siteLogo={globalData.siteLogo} />
       <main className="w-full">
-        <h1 id="back-to-top-anchor" />
-        <div className='pt-16 lg:pt-24'><br/></div>
+        <h1 id="back-to-top-anchor" className="pt-6">&nbsp</h1>
         <HomeSection1 title={homeData.section_1.title} subtitle={homeData.section_1.subtitle} imgSrc={homeData.section_1.imageSrc} />
         <HomeSection2 title={homeData.section_2.title} subtitle={homeData.section_2.subtitle} buttonCaption={homeData.section_2.button_caption} href={homeData.section_2.href} />
         <HomeSection3 title={homeData.section_3.title} subtitle={homeData.section_3.subtitle} imagesSrc={homeData.section_3.images_src} managementList={homeData.section_3.managements} />
