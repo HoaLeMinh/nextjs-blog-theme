@@ -58,7 +58,7 @@ export default function MyCarousel(props) {
             {props.images.map((item, index) => (                
                 <Slide key={index}>
                    {/* <ImageWithZoom  src={item} key={index}/> */}
-                   <Image key={index} src={item} width={600} height={600} objectFit='cover' />
+                   <Image key={index} src={item} width={600} height={600} objectFit='cover' alt={'test'} />
                 </Slide>
               ))}            
             </Slider>
