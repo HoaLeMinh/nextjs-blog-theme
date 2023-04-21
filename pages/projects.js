@@ -4,6 +4,9 @@ import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
+import { Container } from "@mui/system"
+import MyCarousel from '../components/MyCarousel';
+import projectsData from '../data/projectsData';
 
 export default function Projects({ globalData }) {
   return (
@@ -15,6 +18,9 @@ export default function Projects({ globalData }) {
         <h1 id="back-to-top-anchor" className="text-3xl lg:text-5xl font-bold text-center mb-12">
           {"PROJECTS"}
         </h1>
+        <Container maxWidth='sm'>
+          <MyCarousel images={projectsData[0].imagesSrc}/>
+        </Container>
       </main>
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground

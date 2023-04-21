@@ -16,6 +16,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
+import CloseIcon from '@mui/icons-material/Close';
+import Stack from '@mui/material/Stack';
 // import Link from '@mui/material/Link';
 import Link from 'next/link'
 import Image from 'next/image';
@@ -31,13 +33,23 @@ function DrawerAppBar(props) {
   const { window, siteName, siteLogo } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleDrawerToggle = () => {
+/*   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  }; */
+  const handleDrawerOpen = () => {
+    setMobileOpen(true);
+  };
+  const handleDrawerClose = () => {
+    setMobileOpen(false);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-        <Typography variant="h6" sx={{ my: 2 }}>
+    <Box onClick={handleDrawerClose} sx={{ textAlign: 'center', mx:1}}>
+      <Stack direction="row" spacing={2} >
+        <IconButton onClick={handleDrawerClose} >
+          <CloseIcon />
+        </IconButton>
+        <Typography variant="h6" sx={{ my: 2, pt: 1 }}>
             <Link href='/'>    
               <a>
                 <Image
@@ -50,6 +62,7 @@ function DrawerAppBar(props) {
               </a>
             </Link>
         </Typography>
+      </Stack>
       <Divider />
       <List>
         {headerNavLinks.map((item, index) => (
@@ -77,7 +90,7 @@ function DrawerAppBar(props) {
               color="inherit"
               aria-label="open drawer"
               edge="start"
-              onClick={handleDrawerToggle}
+              onClick={handleDrawerOpen}
               sx={{ mr: 2, display: { md: 'none' } }}
             >
               <MenuIcon />
@@ -122,7 +135,7 @@ function DrawerAppBar(props) {
           container={container}
           variant="temporary"
           open={mobileOpen}
-          onClose={handleDrawerToggle}
+          onClose={handleDrawerClose}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
