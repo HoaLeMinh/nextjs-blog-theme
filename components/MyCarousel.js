@@ -29,6 +29,8 @@ export default function MyCarousel(props) {
     }
   }
 
+  // console.log(`interval: ${props.interval}`);
+
   return (
     <>
     <Container maxWidth="sm" sx={compStyling.container} disableGutters={true}>
@@ -49,19 +51,20 @@ export default function MyCarousel(props) {
             totalSlides= {props.images.length}
             currentSlide={currentSlide}
             step={1}
-            naturalSlideWidth={360}
-            naturalSlideHeight={360}
+            naturalSlideWidth={302}
+            naturalSlideHeight={182}
             // hasMasterSpinner
+            interval = {props.interval}
             infinite   
-            isPlaying      
+            isPlaying={props.autoPlay}      
           >
           <div className={compStyling.container}>       
-            <Slider className={compStyling.slider} classNameAnimation={compStyling.omgImgTransition} > {/* classNameAnimation={compStyling.imgTransition} */}
+            <Slider className={compStyling.slider} classNameAnimation={compStyling.omgImgTransition}> {/* classNameAnimation={compStyling.imgTransition} classNameAnimation={"transition-opacity duration-700"}*/}
             {props.images.map((item, index) => (                
                 <Slide index={index} key={index} className='absolute w-full'>
                    {/* <ImageWithZoom  src={item} key={index}/> */}
-                   <Container>
-                    <Image key={index} src={item} fill className={'object-cover'} alt={'test'}/>
+                   <Container sx={compStyling.container}>
+                    <Image key={index} src={item} fill className={`object-cover ${compStyling.omgImgTransition}`} alt={'test'}/>
                    </Container>
                 </Slide>
               ))}            
@@ -69,9 +72,7 @@ export default function MyCarousel(props) {
             <ButtonBack className={compStyling.buttonBack} onClick={(e) => handleClickPreviousEvent(e)}><ArrowBackIosIcon/></ButtonBack>
             <ButtonNext className={compStyling.buttonNext}  onClick={(e) => handleClickNextEvent(e)}> <ArrowForwardIosIcon/></ButtonNext>
             </div>
-            {/* <DotGroup dotNumbers /> */}
-            <DotGroup />
-            
+            {/* <DotGroup dotNumbers /> */}            
          </CarouselProvider>
        
         </Grid>

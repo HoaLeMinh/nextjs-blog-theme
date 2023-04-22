@@ -21,7 +21,7 @@ export default function Projects({ globalData }) {
         </h1>
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 px-4 md:px-8">
           {projectsData.map((project, index) => (
-            <ProjectCard key={index} title={project.title} description={project.description} imagesSrc={project.imagesSrc}></ProjectCard>
+            <ProjectCard key={index} title={project.title} description={project.description} imagesSrc={project.imagesSrc} autoPlay={'true'} interval={5000 + (Math.floor(Math.random() * 1000))}></ProjectCard>
           ))}
         </div>
         {/* <Container maxWidth='sm'>
