@@ -17,7 +17,7 @@ export default function MediaCard({imageSrc, title, description, podcastSrc }) {
           <h2 className="text-xl font-bold p-1">
             {title}
           </h2>
-          <p className="text-md text-left py-4 ">{description}</p>
+          <p className="text-md text-left p-4 ">{description}</p>
           <center className={'aspect-video'}><iframe loading="lazy" className="w-full h-full overflow-hidden" scrolling="no" allow="accelerometer; autoplay;" src={podcastSrc} title={title} height={170} ></iframe></center>
         </div>
       </div>
