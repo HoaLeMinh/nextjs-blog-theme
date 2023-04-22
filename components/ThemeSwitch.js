@@ -7,12 +7,12 @@ function ThemeSwitch() {
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
-        const curDarkMode = (localStorage.getItem('theme') === 'dark');
-        setDarkMode(curDarkMode);
+        const _darkMode = (localStorage.getItem('theme') === 'dark');
+        setDarkMode(_darkMode);
     }, [])
     
     const handleToggle = () => {
-        const curDarkMode = (localStorage.getItem('theme') === 'dark');
+        let curDarkMode = (localStorage.getItem('theme') === 'dark');
         curDarkMode = !curDarkMode;
         setDarkMode(curDarkMode);
         if (curDarkMode) {

@@ -49,17 +49,16 @@ function DrawerAppBar(props) {
         <IconButton onClick={handleDrawerClose} >
           <CloseIcon />
         </IconButton>
-        <Typography variant="h6" sx={{ my: 2, pt: 1 }}>
+        <Typography variant="h6" sx={{ my: 2 }}>
             <Link href='/'>    
-              <a>
                 <Image
                     src={siteLogo}
                     alt={siteName}
                     width={113}
                     height={55}
-                    objectFit='contain'
+                    // objectFit='contain'
+                    className={"object-contain"}
                 />
-              </a>
             </Link>
         </Typography>
       </Stack>
@@ -98,18 +97,17 @@ function DrawerAppBar(props) {
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: {sm: 'block' }, pt: 1}}
+              sx={{ flexGrow: 1, display: {sm: 'block' }}}
             >
               <Link href='/'> 
-                <a>   
                   <Image
                       src={siteLogo}
                       alt={siteName}
                       width={113}
                       height={55}
-                      objectFit='contain'
+                      className={"object-contain"}
+                      // objectFit='contain'
                   />
-                </a>
               </Link>
             </Typography>
             <div className='md:pe-8'>

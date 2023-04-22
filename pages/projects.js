@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import { Container } from "@mui/system"
 import MyCarousel from '../components/MyCarousel';
 import projectsData from '../data/projectsData';
+import ProjectCard from '../components/ProjectCard';
 
 export default function Projects({ globalData }) {
   return (
@@ -18,9 +19,14 @@ export default function Projects({ globalData }) {
         <h1 id="back-to-top-anchor" className="text-3xl lg:text-5xl font-bold text-center mb-12">
           {"PROJECTS"}
         </h1>
-        <Container maxWidth='sm'>
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-8 px-4 md:px-8">
+          {projectsData.map((project, index) => (
+            <ProjectCard key={index} title={project.title} description={project.description} imagesSrc={project.imagesSrc}></ProjectCard>
+          ))}
+        </div>
+        {/* <Container maxWidth='sm'>
           <MyCarousel images={projectsData[0].imagesSrc}/>
-        </Container>
+        </Container> */}
       </main>
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground

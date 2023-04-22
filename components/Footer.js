@@ -75,24 +75,16 @@ function Footer(props) {
           <SocialIcon kind="instagram" href={siteMetadata.instagram} size="6" />
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" /> */}
           <Link href={`mailto:${siteMetadata.email}`}>
-            <a>
               <MailIcon width={24} height={24}/>
-            </a>
           </Link>
-          <Link href={siteMetadata.facebook} >
-            <a target="_blank" rel="noopener noreferrer" >
+          <Link href={siteMetadata.facebook} target={'_blank'} rel={'noopener noreferrer'}>
               <FacebookIcon width={24} height={24} />
-            </a>
           </Link>
-          <Link href={siteMetadata.instagram}>
-            <a target="_blank" rel="noopener noreferrer" >
+          <Link href={siteMetadata.instagram} target={'_blank'} rel={'noopener noreferrer'}>
               <InstagramIcon width={24} height={24} />
-            </a>
           </Link>
-          <Link href={siteMetadata.linkedin}>
-            <a target="_blank" rel="noopener noreferrer" >
+          <Link href={siteMetadata.linkedin} target={'_blank'} rel={'noopener noreferrer'}>
               <LinkedinIcon width={24} height={24} />
-            </a>
           </Link>
         </div>
         <div className="mb-8 flex space-x-2 text-sm text-stale-500 dark:text-stale-400">

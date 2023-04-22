@@ -95,7 +95,7 @@
     animation: glowing 1300ms infinite;
   }
 
-  .imgTransition{
+  .omgImgTransition{
       transition: transform 500ms;
       transition-timing-function: ease-in-out; /* ease-in-out */
       will-change: transform;

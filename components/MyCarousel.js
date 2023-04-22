@@ -30,7 +30,8 @@ export default function MyCarousel(props) {
   }
 
   return (
-    <Container maxWidth='sm'>
+    <>
+    <Container maxWidth="sm" sx={compStyling.container} disableGutters={true}>
       {/* <Grid container spacing={2}> */}
 {/*          <Grid item xs={2}>
            <Stack direction="column" spacing={2} sx={{ maxHeight: 60 }} >
@@ -42,23 +43,26 @@ export default function MyCarousel(props) {
           </Stack>
          </Grid> */}
          
-         <Grid item xs={10}>
+         <Grid item>
           <CarouselProvider
             visibleSlides={1}
-            totalSlides={props.images.length}
+            totalSlides= {props.images.length}
             currentSlide={currentSlide}
             step={1}
-            naturalSlideWidth={300}
-            naturalSlideHeight={300}
-            hasMasterSpinner
-            infinite         
+            naturalSlideWidth={360}
+            naturalSlideHeight={360}
+            // hasMasterSpinner
+            infinite   
+            isPlaying      
           >
           <div className={compStyling.container}>       
-            <Slider className={compStyling.slider}> {/* classNameAnimation={compStyling.imgTransition} */}
+            <Slider className={compStyling.slider} classNameAnimation={compStyling.omgImgTransition} > {/* classNameAnimation={compStyling.imgTransition} */}
             {props.images.map((item, index) => (                
-                <Slide key={index}>
+                <Slide index={index} key={index} className='absolute w-full'>
                    {/* <ImageWithZoom  src={item} key={index}/> */}
-                   <Image key={index} src={item} width={600} height={600} objectFit='cover' alt={'test'} />
+                   <Container>
+                    <Image key={index} src={item} fill className={'object-cover'} alt={'test'}/>
+                   </Container>
                 </Slide>
               ))}            
             </Slider>
@@ -73,5 +77,6 @@ export default function MyCarousel(props) {
         </Grid>
       {/* </Grid> */}
     </Container>
+    </>
   )
 }
