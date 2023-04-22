@@ -59,12 +59,12 @@ export default function MyCarousel(props) {
             isPlaying={props.autoPlay}      
           >
           <div className={compStyling.container}>       
-            <Slider className={compStyling.slider} classNameAnimation={compStyling.omgImgTransition}> {/* classNameAnimation={compStyling.imgTransition} classNameAnimation={"transition-opacity duration-700"}*/}
+            <Slider className={compStyling.slider}> {/* classNameAnimation={compStyling.omgImgTransition} classNameAnimation={"transition-opacity duration-700"}*/}
             {props.images.map((item, index) => (                
                 <Slide index={index} key={index} className='absolute w-full'>
                    {/* <ImageWithZoom  src={item} key={index}/> */}
                    <Container sx={compStyling.container}>
-                    <Image key={index} src={item} fill className={`object-cover ${compStyling.omgImgTransition}`} alt={'test'}/>
+                    <Image key={index} src={item} fill className={'object-cover'} alt={'test'}/>
                    </Container>
                 </Slide>
               ))}            
