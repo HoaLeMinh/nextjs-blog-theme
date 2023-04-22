@@ -5,7 +5,7 @@ export default function ProjectCard({title, description, imagesSrc, autoPlay, in
     <>
     <div className="w-full border-2 border-solid border-slate-300 dark:border-slate-500 rounded-lg">
         <MyCarousel images={imagesSrc} autoPlay={autoPlay} interval={interval} className="w-full" />
-      <div className="text-center">
+      <div className="mt-4 text-center">
         <h2 className="text-xl font-bold p-1">
           {title}
         </h2>
