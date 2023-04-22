@@ -1,11 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import siteMetadata from '../data/siteMetadata';
-/* import Mail from '../data/mail.svg'
-import Facebook from '../data/facebook.svg' */
-/* import Linkedin from '../data/linkedin.svg'
-import Instagram from '../data/instagram.svg' */
-
 import MailIcon from './MailIcon'
 import FacebookIcon from './FacebookIcon'
 import LinkedinIcon from './LinkedinIcon'

@@ -1,8 +1,4 @@
-// import { MasonryGrid } from '@egjs/react-grid'
-// import Image from 'next/image'
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import Image from 'next/image'
 
 const HomeSection5 = ({ title, imagesSrc }) => {
@@ -64,7 +60,7 @@ const HomeSection5 = ({ title, imagesSrc }) => {
                   alt={'network'}
                   width={120}
                   height={64}
-                  objectFit={'contain'}
+                  fit="contain"
                 />
               );})}
           </div>

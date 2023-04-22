@@ -17,7 +17,7 @@ const HomeSection3 = ({ title, subtitle, imagesSrc, managementList }) => (
                   alt={'talents'}
                   width={400}
                   height={640}
-                  objectFit={'cover'}
+                  fit="cover"
                   className="rounded-lg"
                 />
               </div>
@@ -39,7 +39,7 @@ const HomeSection3 = ({ title, subtitle, imagesSrc, managementList }) => (
                     alt={'management'}
                     width={600}
                     height={600}
-                    objectFit={'cover'}
+                    fit="cover"
                     className="rounded-lg"
                   />
                   {/* <img src={value.image_src} alt={'management'} height={400} /> */}

@@ -56,8 +56,7 @@ function DrawerAppBar(props) {
                     alt={siteName}
                     width={113}
                     height={55}
-                    // objectFit='contain'
-                    className={"object-contain"}
+                    fit='contain'
                 />
             </Link>
         </Typography>
@@ -105,8 +104,7 @@ function DrawerAppBar(props) {
                       alt={siteName}
                       width={113}
                       height={55}
-                      className={"object-contain"}
-                      // objectFit='contain'
+                      fit='contain'
                   />
               </Link>
             </Typography>

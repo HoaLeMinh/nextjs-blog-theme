@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image'
-import headerNavLinks from '../data/headerNavLinks'
 import DrawerAppBar from './DrawerAppBar'
 
 export default function Header({ siteName, siteLogo }) {

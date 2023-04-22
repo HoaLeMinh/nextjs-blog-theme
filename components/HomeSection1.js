@@ -1,5 +1,3 @@
-// import Image from 'next/image'
-
 const HomeSection1 = ({ title, subtitle, imgSrc }) => (
   <div className="w-full space-y-2 pt-6 pb-8 md:space-y-5">
     <div className="relative">

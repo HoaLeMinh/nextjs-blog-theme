@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
 import EnFlagIcon from '../data/en-flag.svg';
 import ViFlagIcon from '../data/vi-flag.svg';
 import Image from 'next/image';

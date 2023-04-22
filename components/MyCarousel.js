@@ -1,10 +1,8 @@
 import React, {  useState } from 'react';
 import { Container } from "@mui/system"
-import { CarouselProvider, Slider, Slide, ImageWithZoom, DotGroup,   ButtonBack, ButtonNext  } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext  } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
-import { Box } from '@mui/material';
 import Image from 'next/image';
 import compStyling from '../styles/mycarousel.module.css'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -64,7 +62,7 @@ export default function MyCarousel(props) {
                 <Slide index={index} key={index} className='absolute w-full'>
                    {/* <ImageWithZoom  src={item} key={index}/> */}
                    <Container sx={compStyling.container}>
-                    <Image key={index} src={item} fill className={'object-cover'} alt={'test'}/>
+                    <Image key={index} src={item} fill fit="cover" alt={'item'}/>
                    </Container>
                 </Slide>
               ))}            

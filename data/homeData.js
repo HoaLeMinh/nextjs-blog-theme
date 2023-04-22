@@ -31,22 +31,22 @@ const homeData = {
       {
         title: 'Talent Mangement',
         image_src:
-          'https://static.wixstatic.com/media/11062b_457dd75c0cc54f0e9a9d0f720be078b7~mv2.jpg/v1/fill/w_692,h_1152,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_457dd75c0cc54f0e9a9d0f720be078b7~mv2.jpg',
+          'https://static.wixstatic.com/media/11062b_457dd75c0cc54f0e9a9d0f720be078b7~mv2.jpg/v1/fill/w_670,h_670,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_457dd75c0cc54f0e9a9d0f720be078b7~mv2.jpg',
       },
       {
         title: 'Event Management',
         image_src:
-          'https://static.wixstatic.com/media/11062b_8dd037aad86a4db98b915e125bbf2afe~mv2.jpeg/v1/fill/w_670,h_1152,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_8dd037aad86a4db98b915e125bbf2afe~mv2.jpeg',
+          'https://static.wixstatic.com/media/11062b_8dd037aad86a4db98b915e125bbf2afe~mv2.jpeg/v1/fill/w_670,h_670,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_8dd037aad86a4db98b915e125bbf2afe~mv2.jpeg',
       },
       {
         title: 'Project Management',
         image_src:
-          'https://static.wixstatic.com/media/11062b_1621231ea79e4e6684121bad509f9a6f~mv2.jpeg/v1/fill/w_670,h_1152,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_1621231ea79e4e6684121bad509f9a6f~mv2.jpeg',
+          'https://static.wixstatic.com/media/11062b_1621231ea79e4e6684121bad509f9a6f~mv2.jpeg/v1/fill/w_670,h_670,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_1621231ea79e4e6684121bad509f9a6f~mv2.jpeg',
       },
       {
         title: 'Wealth Management',
         image_src:
-          'https://static.wixstatic.com/media/f73c4f_264d2dd9a67a4596acf584ee7b76e756~mv2.jpg/v1/fill/w_294,h_506,al_c,q_80,enc_auto/f73c4f_264d2dd9a67a4596acf584ee7b76e756~mv2.jpg',
+          'https://static.wixstatic.com/media/f73c4f_264d2dd9a67a4596acf584ee7b76e756~mv2.jpg/v1/fill/w_670,h_670,al_c,q_80,enc_auto/f73c4f_264d2dd9a67a4596acf584ee7b76e756~mv2.jpg',
       },
     ],
   },
